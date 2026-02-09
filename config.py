@@ -3,7 +3,7 @@ import os
 
 # ========== Paths ==========
 # 建议根据实际环境修改 data_root
-data_root = "/mnt/d/data/face/img/img_align_celeba"
+data_root = "/Users/wayne/Downloads/train_data/faces_vae_ddpm/img_align_celeba/img_align_celeba"
 save_dir = "./vae_test_checkpoints"
 os.makedirs(save_dir, exist_ok=True)
 

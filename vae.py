@@ -174,13 +174,13 @@ def train():
 
             if batch_idx % 100 == 0:
                 print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] "
-                      f"Epoch {epoch}/{num_epochs} Batch {batch_idx}/{len(loader)} "
-                      f"Loss {loss.item():.4f} "
-                      f"(recon {recon_l.item():.4f}, kld {kld.item():.4f})")
+                    f"Epoch {epoch}/{num_epochs} Batch {batch_idx}/{len(loader)} "
+                    f"Loss {loss.item():.4f} "
+                    f"(recon {recon_l.item():.4f}, kld {kld.item():.4f})")
 
         n_samples = len(loader.dataset)
         print(f"=== Epoch {epoch} finished. Avg loss: {epoch_loss / n_samples:.4f} "
-              f"(recon {epoch_recon / n_samples:.4f}, kld {epoch_kld / n_samples:.4f}) ===")
+            f"(recon {epoch_recon / n_samples:.4f}, kld {epoch_kld / n_samples:.4f}) ===")
 
         # 保存样本
         if epoch % sample_every == 0 or epoch == 1:
